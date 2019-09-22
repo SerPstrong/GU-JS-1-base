@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson1</title>
+</head>
+<body>
+<script>
+    // 1. Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по
+    // Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту,
+    // Tc – температура по Цельсию
+
+    const Tc = +prompt("Введите температуру по цельсию");
+
+    /**
+     *
+     * @returns {number}
+     * @constructor
+     */
+    const Tf = () => (9 / 5) * Tc + 32;
+
+    console.log(Tf(Tc));
+
+    // 2. Работа с переменными. Объявить две переменные: admin и name. Записать в name строку "Василий";
+    // Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).
+
+    const name = "Василий";
+    const admin = name;
+    console.log(admin);
+
+
+    // 3. *Чему будет равно JS-выражение 1000 + "108"/
+
+    //1000108
+
+    console.log(1000 + "108");
+    console.log(typeof (1000 + "108"));
+
+
+</script>
+</body>
+</html>
