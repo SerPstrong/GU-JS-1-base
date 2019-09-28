@@ -56,52 +56,51 @@
     let aVar = randomInteger(0, 15);
 
     switch (aVar) {
-        case aVar = 0:
+        case 0:
             aVar = 0;
             console.log(aVar);
-        case aVar = 1:
-            aVar = 1;
+        case 1:
             console.log(aVar);
-        case aVar = 2:
+        case 2:
             aVar = 2;
             console.log(aVar);
-        case aVar = 3:
+        case 3:
             aVar = 3;
             console.log(aVar);
-        case aVar = 4:
+        case 4:
             aVar = 4;
             console.log(aVar);
-        case aVar = 5:
+        case 5:
             aVar = 5;
             console.log(aVar);
-        case aVar = 6:
+        case 6:
             aVar = 6;
             console.log(aVar);
-        case aVar = 7:
+        case 7:
             aVar = 7;
             console.log(aVar);
-        case aVar = 8:
+        case 8:
             aVar = 8;
             console.log(aVar);
-        case aVar = 9:
+        case 9:
             aVar = 9;
             console.log(aVar);
-        case aVar = 10:
+        case 10:
             aVar = 10;
             console.log(aVar);
-        case aVar = 11:
+        case 11:
             aVar = 11;
             console.log(aVar);
-        case aVar = 12:
+        case 12:
             aVar = 12;
             console.log(aVar);
-        case aVar = 13:
+        case 13:
             aVar = 13;
             console.log(aVar);
-        case aVar = 14:
+        case 14:
             aVar = 14;
             console.log(aVar);
-        case aVar = 15:
+        case 15:
             aVar = 15;
             console.log(aVar);
     }
@@ -130,50 +129,45 @@
     //         переданного значения операции выполнить одну из арифметических операций
     //         (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).
 
-    // let arg1 = randomInteger(1, 100);
-    // let arg2 = randomInteger(1, 100);
-    // let operation = "div";
+    let arg1 = randomInteger(1, 100);
+    let arg2 = randomInteger(1, 100);
+
+    let arr = ['add', 'sub', 'div', 'mul'];
+    let rand = Math.floor(Math.random() * arr.length);
+    let operation = (arr[rand]);
 
     function mathOperation(arg1, arg2, operation) {
 
-        function addition(x, y) {
-            return x + y;
-        }
-
-        function subtraction(x, y) {
-            return x - y;
-        }
-
-        function division(x, y) {
-            return x / y;
-        }
-
-        function multiplication(x, y) {
-            return x * y;
-        }
-
         switch (operation) {
-            case operation === 'add':
+            case 'add':
                 return addition(arg1, arg2);
                 break;
-            case operation === 'sub':
+            case 'sub':
                 return subtraction(arg1, arg2);
                 break;
-            case operation === 'div':
-                return  666;
+            case 'div':
+                return division(arg1, arg2);
                 break;
-            case operation === 'mul':
+            case 'mul':
                 return multiplication(arg1, arg2);
                 break;
         }
     }
 
-    console.log(mathOperation(30, 6, "div"));
+    console.log(mathOperation(arg1, arg2, operation));
 
     // ### 7. *Сравнить null и 0. Попробуйте объяснить результат.
-    //
+
+    console.log(typeof null);
+    console.log(typeof 0);
+    console.log(null < 0);
+    console.log(null == 0);
+    console.log(null > 0);
+
     // ### 8. *С помощью рекурсии организовать функцию возведения числа в степень.
     //                 Формат: function power(val, pow), где val – заданное число, pow – степень.
+
+
 
 </script>
 
