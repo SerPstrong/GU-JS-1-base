@@ -10,6 +10,7 @@
 <body>
 
 <script>
+    "use strict";
 
     // 1. Дан код:
     // var a = 1, b = 1, c, d;
@@ -51,15 +52,124 @@
 
     // ### 4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch
     //     организовать вывод чисел от a до 15.
-    //
+
+    let aVar = randomInteger(0, 15);
+
+    switch (aVar) {
+        case aVar = 0:
+            aVar = 0;
+            console.log(aVar);
+        case aVar = 1:
+            aVar = 1;
+            console.log(aVar);
+        case aVar = 2:
+            aVar = 2;
+            console.log(aVar);
+        case aVar = 3:
+            aVar = 3;
+            console.log(aVar);
+        case aVar = 4:
+            aVar = 4;
+            console.log(aVar);
+        case aVar = 5:
+            aVar = 5;
+            console.log(aVar);
+        case aVar = 6:
+            aVar = 6;
+            console.log(aVar);
+        case aVar = 7:
+            aVar = 7;
+            console.log(aVar);
+        case aVar = 8:
+            aVar = 8;
+            console.log(aVar);
+        case aVar = 9:
+            aVar = 9;
+            console.log(aVar);
+        case aVar = 10:
+            aVar = 10;
+            console.log(aVar);
+        case aVar = 11:
+            aVar = 11;
+            console.log(aVar);
+        case aVar = 12:
+            aVar = 12;
+            console.log(aVar);
+        case aVar = 13:
+            aVar = 13;
+            console.log(aVar);
+        case aVar = 14:
+            aVar = 14;
+            console.log(aVar);
+        case aVar = 15:
+            aVar = 15;
+            console.log(aVar);
+    }
+
     // ### 5. Реализовать основные 4 арифметические операции в виде
     //         функций с двумя параметрами. Обязательно использовать оператор return.
-    //
+
+    function addition(x, y) {
+        return x + y;
+    }
+
+    function subtraction(x, y) {
+        return x - y;
+    }
+
+    function division(x, y) {
+        return x / y;
+    }
+
+    function multiplication(x, y) {
+        return x * y;
+    }
+
     // ### 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
     //         где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
     //         переданного значения операции выполнить одну из арифметических операций
     //         (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).
-    //
+
+    // let arg1 = randomInteger(1, 100);
+    // let arg2 = randomInteger(1, 100);
+    // let operation = "div";
+
+    function mathOperation(arg1, arg2, operation) {
+
+        function addition(x, y) {
+            return x + y;
+        }
+
+        function subtraction(x, y) {
+            return x - y;
+        }
+
+        function division(x, y) {
+            return x / y;
+        }
+
+        function multiplication(x, y) {
+            return x * y;
+        }
+
+        switch (operation) {
+            case operation === 'add':
+                return addition(arg1, arg2);
+                break;
+            case operation === 'sub':
+                return subtraction(arg1, arg2);
+                break;
+            case operation === 'div':
+                return  666;
+                break;
+            case operation === 'mul':
+                return multiplication(arg1, arg2);
+                break;
+        }
+    }
+
+    console.log(mathOperation(30, 6, "div"));
+
     // ### 7. *Сравнить null и 0. Попробуйте объяснить результат.
     //
     // ### 8. *С помощью рекурсии организовать функцию возведения числа в степень.
