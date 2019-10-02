@@ -53,6 +53,10 @@ const game = {
                 return alert('До свидания!');
             }
 
+            if (player.x > 10 || player.x < 0 || player.y > 10 || player.y < 0) {
+                return false;
+            }
+
             this.player.move(direction);
         }
     },
