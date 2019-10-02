@@ -54,7 +54,7 @@ const game = {
             }
 
             if (player.x > 10 || player.x < 0 || player.y > 10 || player.y < 0) {
-                return false;
+                return this.run();
             }
 
             this.player.move(direction);
