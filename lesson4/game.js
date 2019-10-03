@@ -21,15 +21,27 @@ const player = {
     move(direction) {
         switch (direction) {
             case 2:
+                if (this.y > settings.colCount) {
+                    return this.y;
+                }
                 this.y++;
                 break;
             case 4:
+                if (this.x < 0) {
+                    return this.x;
+                }
                 this.x--;
                 break;
             case 6:
+                if (this.x > settings.rowCount) {
+                    return this.x;
+                }
                 this.x++;
                 break;
             case 8:
+                if (this.y < 0) {
+                    return this.y;
+                }
                 this.y--;
                 break;
         }
@@ -53,9 +65,9 @@ const game = {
                 return alert('До свидания!');
             }
 
-            if (player.x > 10 || player.x < 0 || player.y > 10 || player.y < 0) {
-                return this.run();
-            }
+            // if (player.x > settings.colCount || player.x < settings.rowCount || player.y > settings.colCount || player.y < settings.rowCount) {
+            //     return this.run();
+            // }
 
             this.player.move(direction);
         }
