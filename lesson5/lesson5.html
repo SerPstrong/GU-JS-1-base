@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 5 - DOM</title>
+</head>
+<body>
+<div id="id-test">
+    <h1 style="font-size: 20px">Тестовая страница</h1>
+    <div class="test-class">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, quis, soluta! Alias, aliquam asperiores consectetur culpa error et facere fugiat ipsum molestias nemo, perspiciatis quae quam sit sunt suscipit voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem distinctio et fugit non numquam optio quod, reiciendis vel vero. Doloremque illo ipsa nihil nostrum pariatur sint temporibus. Commodi, provident?</p>
+    </div>
+    <div class="test-class">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, quis, soluta! Alias, aliquam asperiores consectetur culpa error et facere fugiat ipsum molestias nemo, perspiciatis quae quam sit sunt suscipit voluptatem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem distinctio et fugit non numquam optio quod, reiciendis vel vero. Doloremque illo ipsa nihil nostrum pariatur sint temporibus. Commodi, provident?</p>
+    </div>
+</div>
+<input type="text" value="6426482">
+<a href="#" onclick="alert(123)">link</a>
+<a href="#" onclick="sayHello()">link</a>
+<script>
+    'use strict';
+    // console.log(document);
+    // console.dir(document);
+    // console.dir(window.document);
+
+    // Поиск
+    // console.log(document.getElementById('id-test'));
+    // console.log(document.getElementsByClassName('test-class'));
+    // const elems = document.getElementsByClassName('test-class');
+    // const elemsArr = [...elems];
+    // console.log(elemsArr);
+    // console.log(document.getElementsByTagName('P'));
+    // console.log(document.querySelector('.test-class:last-child'));
+    // console.log(document.querySelectorAll('.test-class'));
+
+    // Перебор
+    // const pTags = document.querySelectorAll('p');
+    // const pTags = [...document.querySelectorAll('p')];
+
+    // for (let i = 0; i < pTags.length; i++) {
+    //   console.log(pTags[i]);
+    // }
+    // pTags.forEach((elem) => {
+    //   console.log(elem);
+    // });
+
+    // Изменение
+    // const h1Tag = document.querySelector('H1');
+    // console.log(h1Tag.textContent);
+    // console.log(h1Tag.innerText);
+    // console.log(h1Tag.innerHTML);
+
+    // h1Tag.textContent = h1Tag.textContent + '!';
+    // h1Tag.innerText = h1Tag.innerText + '!';
+    // h1Tag.innerHTML = h1Tag.innerHTML + '<i>!</i>';
+
+    // Стили
+    // console.log(h1Tag.style.fontSize);
+    // h1Tag.style.color = '#f00';
+    // console.log(getComputedStyle(h1Tag).fontSize);
+
+    // Создание
+    // const myDiv = document.createElement('DIV');
+    // const input = document.querySelector('INPUT');
+    // myDiv.textContent = 'Hello!';
+
+    // document.querySelector('BODY').appendChild(myDiv);
+    // document.body.appendChild(myDiv);
+
+    // document.body.insertAdjacentHTML('afterend', elem);
+    // insertBefore();
+
+    // input.insertAdjacentHTML('beforebegin', '<b>sfsff</b>');
+    // input.insertAdjacentHTML('afterend', '<b>sfsffhfkah</b>');
+
+    // const h1Tag = document.querySelector('H1');
+    // const h1Tag = document.querySelector('H1').cloneNode(true);
+    // const parentElement = document.querySelector('#id-test');
+    // const refElem = document.querySelector('.test-class:last-child');
+    // parentElement.insertBefore(h1Tag, refElem);
+
+    // Удаление
+    // const h1Tag = document.querySelector('H1');
+    // h1Tag.remove();
+    // h1Tag.parentElement.removeChild(h1Tag);
+    // console.log(h1Tag.parentElement);
+    // console.log(h1Tag.parentElement.children);
+    // console.log(h1Tag.parentElement.children[1]);
+    // console.log(h1Tag.parentElement.children[1].querySelector('p:last-child'));
+
+    // События
+    // function sayHello(e) {
+    //   alert('Hello!');
+    //   console.log(e);
+    //   console.log(this);
+    // }
+    //
+    // const h1Tag = document.querySelector('H1');
+
+    // h1Tag.onclick = function () {
+    //   alert('Hello!');
+    // };
+    // h1Tag.onclick = function () {
+    //   alert('Bye!');
+    // };
+    // h1Tag.onclick = null;
+
+    // h1Tag.addEventListener('click', function () {
+    //   console.log('Hello!');
+    // });
+    // h1Tag.addEventListener('click', sayHello);
+    // h1Tag.addEventListener('click', () => sayHello('Vasya'));
+    // h1Tag.addEventListener('click', () => {
+    //   console.log('Bye!');
+    // });
+    //
+    // h1Tag.removeEventListener('click', function () {
+    //   console.log('Hello!');
+    // });
+    // h1Tag.removeEventListener('click', sayHello);
+
+    // События документа
+    // window.addEventListener('load', function () {
+    //   alert('1111');
+    // });
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   alert('222');
+    // });
+    // window.addEventListener('beforeunload', function () {
+    //   alert('1111');
+    // });
+</script>
+</body>
+</html>
