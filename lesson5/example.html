@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Example</title>
+</head>
+<body>
+
+<!--1111111111111111111111111111111111-->
+<h2 id="div1">Some data in div-1</h2>
+<h2 id="div2">Another data in div-2</h2>
+<h2 id="div3">Anything else in div-3</h2>
+<script>
+    "use strict";
+
+    let content2 = document.getElementById("div2");
+    content2.innerText = "Совершенно новая информация";
+
+    var div111 = document.createElement("div");
+    // div.className = "my_div";
+    div111.innerHTML = "<h1>Заголовок</h1><p>Содержимое</p>";
+    document.body.appendChild(div111);
+
+</script>
+<!--11111111111111111111111111111111111111111-->
+
+<!--222222222222222222222222222222222222222-->
+<ol id="list">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+</ol>
+<script>
+    "use strict";
+    let listo = document.getElementById("list");
+    let newLi = document.createElement("li");
+    newLi.innerText = "Привет, мир!";
+    listo.appendChild(newLi);
+
+    //parentElem.insertBefore(elem, nextSibling) —
+    // вставляет elem в коллекцию детей parentElem перед элементом nextSibling.
+    let newLi2 = document.createElement("li");
+    newLi2.innerHTML = "Привет, миррррррррррр!";
+    listo.insertBefore(newLi2, listo.children[1]);
+</script>
+<!--2222222222222222222222222222222222222222222-->
+
+<!--3333333333333333333333333-->
+<script>
+    // Добавление атрибута
+    content2.setAttribute("title", "My title");
+
+    // изменить стили элемента
+    content2.style.color = "blue";
+
+    // getAttribute —метод чтения атрибутов, который
+    // вызывается для получения значения атрибута элемента HTML-кода.
+    let class_value = content2.getAttribute("class");
+</script>
+<!--33333333333333333333333333333333333333-->
+
+<!--444444444444444444444444444444444-->
+<div id="clock" class="example for you"></div>
+<script>
+    let elem = document.querySelector("#clock");
+    // Выведем классы
+    console.log(elem.classList); // DOMTokenList ["example", "for", "you"]
+
+    // Добавим классы
+    elem.classList.add("ok", "understand");
+    console.log(elem.classList); // DOMTokenList ["example", "for", "you", "ok", "understand"]
+
+    // Переключим классы
+    elem.classList.toggle("you");
+    elem.classList.toggle("he");
+    console.log(elem.classList); // DOMTokenList ["example", "for", "ok", "understand", "he"]
+
+    // Проверим класс
+    console.log(elem.classList.contains("example")); // true
+    console.log(elem.classList.contains("lol"));     // false
+
+    // И удалим классы
+    elem.classList.remove("example", "for", "understand", "he");
+    console.log(elem.classList); // DOMTokenList ["ok"]
+</script>
+<!--44444444444444444444444444444444444444-->
+
+<script src="js/chess.js"></script>
+</body>
+</html>
