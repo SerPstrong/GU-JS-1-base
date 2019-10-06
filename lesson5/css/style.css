@@ -12,22 +12,15 @@
 .td {
     width: 50px;
     height: 50px;
-    background-color: #888888;
 
 }
 
-.td:nth-child(2n) {
-    background-color: black;
+.black {
+    background-color: #000;
 }
 
-.td_left-black {
-    width: 50px;
-    height: 50px;
-    background-color: #888888;
-}
-
-.td_left-black:nth-child(2n+1) {
-    background-color: black;
+.grey {
+    background-color: #888;
 }
 
 .td_letter {
@@ -48,4 +41,8 @@
 
 .rotate {
     transform: rotate(180deg);
+}
+
+td {
+    text-align: center;
 }
