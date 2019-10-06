@@ -1,0 +1,51 @@
+
+.container {
+    max-width: 960px;
+    margin: 50px auto 0 auto;
+}
+
+.table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.td {
+    width: 50px;
+    height: 50px;
+    background-color: #888888;
+
+}
+
+.td:nth-child(2n) {
+    background-color: black;
+}
+
+.td_left-black {
+    width: 50px;
+    height: 50px;
+    background-color: #888888;
+}
+
+.td_left-black:nth-child(2n+1) {
+    background-color: black;
+}
+
+.td_letter {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.numeral {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.td_letter {
+    width: 50px;
+    height: 50px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
