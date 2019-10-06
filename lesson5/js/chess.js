@@ -72,10 +72,16 @@ for (let row = 0; row < 10; row++) {
             continue;
         }
         if (col === 0) {
+            if (row === 0) {
+                continue;
+            }
             chessTd.textContent = row;
             continue;
         }
         if (col === 9) {
+            if (row === 9) {
+                continue;
+            }
             chessTd.textContent = row;
             chessTd.classList.add("rotate");
             continue;
