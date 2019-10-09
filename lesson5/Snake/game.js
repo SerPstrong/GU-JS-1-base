@@ -140,8 +140,8 @@ const game = {
     canPlayerMakeStep() {
         const nextPoint = this.player.getNextStepPoint();
 
-        return nextPoint.x >= 0 &&
-            nextPoint.x < this.settings.colCount &&
+        return nextPoint.x >= 0 && nextPoint.x <
+            this.settings.colCount &&
             nextPoint.y >= 0 &&
             nextPoint.y < this.settings.rowCount;
     }
