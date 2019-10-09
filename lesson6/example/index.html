@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Image Gallery </title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script></script>
+</head>
+<body>
+<div id="big_picture"></div>
+<div id="gallery">
+    <img id="image_1" class="img_block" src="images/1.jpg">
+    <img id="image_2" class="img_block" src="images/2.jpg">
+    <img id="image_4" class="img_block" src="images/4.jpg">
+</div>
+
+<script>
+    "use strict";
+
+    function init() {
+        let images = document.getElementsByTagName("img");
+        for (let i = 0; i < images.length; i++) {
+            images[i].onclick = changeBigPicture;
+        }
+    }
+
+    function changeBigPicture(eventObj) {
+        let appDiv = document.getElementById("big_picture");
+        appDiv.innerHTML = "";
+        let eventElement = eventObj.target;
+        let imageNameParts = eventElement.id.split("_");
+        let src = "images/big/" + imageNameParts[1] + ".jpg";
+        let imageDomElement = document.createElement("img");
+        imageDomElement.classList.add("big_pic");
+        imageDomElement.src = src;
+        appDiv.appendChild(imageDomElement);
+    }
+
+    window.onload = init;
+
+</script>
+
+</body>
+</html>
