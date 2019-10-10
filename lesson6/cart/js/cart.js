@@ -29,13 +29,10 @@ for (key in Catalog.goods) {
 
 
 let btnSendToCard = document.getElementsByClassName('btnSendToCard');
-// btnSendToCard - это HTML коллекция
 
-// это метод который будет добавлять товар в козину
 let sendToCart = (e) => {
-// Получаем  id кнопки
+
     console.log('Добавляем что-то в корзину', e.target.id);
-// Перебераем весь кталог на поиск нашего товара
 
     for (key in Catalog.goods) {
         if (Catalog.goods[key].id_product == e.target.id) {
@@ -47,11 +44,6 @@ let sendToCart = (e) => {
     console.log('Корзина', cart.goods);
     cart.render();
 };
-
-// ... - это спред оператор  появился в ES6
-//преобразует коллекцию  обычный масси
-// далемм можно было было использовать for (let i = 0; i<[...btnSendToCard].lenght; i++)
-// Но есть волшебный map который переберает массив и в element (можно назвать как угодно) попадает один элемент массива
 
 [...btnSendToCard].map(element => {
     element.addEventListener('click', sendToCart);
