@@ -36,12 +36,9 @@ let sendToCart = (e) => {
 
     for (key in Catalog.goods) {
         if (Catalog.goods[key].id_product == e.target.id) {
-            console.log('Нашли');
-// если товар нашли то Пушим в массив корзины
             cart.goods.push(Catalog.goods[key]);
         }
     }
-    console.log('Корзина', cart.goods);
     cart.render();
 };
 
