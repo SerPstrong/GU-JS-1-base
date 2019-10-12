@@ -240,12 +240,14 @@ const game = {
         this.snake.init(this.getStartSnakeBody(), 'up');
         this.food.setCoordinates(this.getRandomFreeCoordinates());
         this.render();
+        this.newGameFoodCounter();
     },
 
     play() {
         this.status.setPlaying();
         this.tickInterval = setInterval(() => this.tickHandler(), 1000 / this.config.getSpeed());
         this.setPlayButton('Стоп');
+        this.foodCounter.counter++
     },
 
     stop() {
@@ -260,6 +262,11 @@ const game = {
         this.setPlayButton('Игра закончена', true);
     },
 
+    newGameFoodCounter() {
+        this.foodCounter.counter = 0;
+        document.querySelector(".food_counter span").textContent = `${foodCounter.counter}`;
+    },
+
     tickHandler() {
         if (!this.canMakeStep()) {
             return this.finish();
@@ -269,7 +276,6 @@ const game = {
             this.snake.growUp();
             this.food.setCoordinates(this.getRandomFreeCoordinates());
 
-
             document.querySelector(".food_counter span").textContent = `${foodCounter.counter}`;
             this.foodCounter.counter++;
 
@@ -277,12 +283,6 @@ const game = {
                 this.finish();
             }
         }
-
-        // document.querySelector(".food_counter").innerText += `${foodCounter.counter}`;
-//         this.foodCounter.counter = inn;
-//
-//       document.querySelector('.new_catalog').innerHTML += `<p>${Catalog.goods[key].product_name}</p><p>${Catalog.goods[key].price}</p>
-// <button id='${Catalog.goods[key].id_product}' class='btnSendToCard'>Добавить</button>`;
 
         this.snake.makeStep();
         this.render();
