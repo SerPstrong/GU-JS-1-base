@@ -21,12 +21,10 @@ const Catalog = {
     ],
 };
 
-
 for (key in Catalog.goods) {
     document.querySelector('.new_catalog').innerHTML += `<p>${Catalog.goods[key].product_name}</p><p>${Catalog.goods[key].price}</p>
 <button id='${Catalog.goods[key].id_product}' class='btnSendToCard'>Добавить</button>`;
 }
-
 
 let btnSendToCard = document.getElementsByClassName('btnSendToCard');
 
