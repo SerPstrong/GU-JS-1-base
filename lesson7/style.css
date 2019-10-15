@@ -44,9 +44,10 @@ td.cell{
 .disabled:hover{
     background: #7c7c7c;
 }
-
-.food_counter {
-    color: #fff;
+#game-score {
+    margin-top: 1%;
     text-align: center;
-    font-size: 40px;
+    font-family: "Lobster", serif;
+    font-size: 2em;
+    color: #d40019;
 }
